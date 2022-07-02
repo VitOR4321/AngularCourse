@@ -1,3 +1,5 @@
+/*kod do powiekszania czcionki 
+//i pokazanie rówżnych form wyświetlania w konsoli danych
 (function()
 {
 'use strict'
@@ -34,3 +36,33 @@ console.log(DIController.toString())
 
 
 })();
+*/
+
+
+//minification code
+(function()
+{
+'use strict'
+
+angular.module('DIApp', [])
+
+//.controller('DIController', ['$scope','$filter', DIController]);
+.controller('DIController', DIController);
+
+DIController.$inject=['$scope','$filter'];
+function DIController ($scope, $filter){
+    $scope.name="Witek";
+
+    $scope.upper = function (){
+        var upCase = $filter('uppercase');
+        $scope.name = upCase($scope.name);
+    };
+}
+
+})();
+
+
+//minifier code ze storny https://www.toptal.com/developers/javascript-minifier
+//angular.module("DIApp",[]).controller("DIController",["$scope","$filter",function(a,b,c){a.name="Witek",a.upper=function(){var c=b("uppercase");a.name=c(a.name)}}])
+//minifier codev2 ze storny https://www.toptal.com/developers/javascript-minifier
+//!function(){"use strict";function a(a,b){a.name="Witek",a.upper=function(){var c=b("uppercase");a.name=c(a.name)}}angular.module("DIApp",[]).controller("DIController",a),a.$inject=["$scope","$filter"]}()
