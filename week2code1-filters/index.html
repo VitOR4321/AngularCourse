@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Expression and Interpolation</h1>
+    <div ng-controller='MsgController'>
+        {{name}} jego powiedzenie:<br>
+        {{sayMessage()}}
+        <div>
+        <button ng-click="feedYaakov()">nakarm go</button>
+          <!--Filter w html-->
+        Cost: {{cookieCost | currency : "#blah" : 4}}
+        <br>
+        <!--ng-src potrzebne żeby przeglądarka nie wychwytywała błędu-->
+        <img ng-src="yaakov_{{stateOfBeing}}.png">
+        </div>
+    </div>
+   
+</body>
+</html>

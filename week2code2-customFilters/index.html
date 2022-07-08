@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Filters</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Custom Filters</h1>
+    <div ng-controller='MsgController'>
+        {{name}} jego powiedzenie:<br>
+        Original message: {{sayMessage()}}
+        <br>
+        <!--wywołanie funkcji filter-->
+        Loves: {{sayLovesMessage()}}
+        <br>
+        <!--wywołanie z argumentami w html-->
+        Truth: {{sayLovesMessage() | truth: 'placki' : 'naleśniki' }}
+        <br>
+        <!--łaczenie filtrów-->
+        Big Truth: {{sayLovesMessage() | truth: 'placki' : 'naleśniki' | uppercase}}
+        <div>
+        <button ng-click="feedYaakov()">nakarm go</button>
+        <br>
+        <img ng-src="yaakov_{{stateOfBeing}}.png">
+        </div>
+    </div>
+   
+</body>
+</html>
