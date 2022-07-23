@@ -25,13 +25,13 @@
       <!-- Sposoby na wyświetlanie błędów lub wyjątków.-->
 
       <!-- ng-if działa tak że jest to zakomantowany div dopóki nie ma wyjątku-->
-       <!--<div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
+       <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> 
       
        <!-- ukryty div dokóki nie ma wyjątku-->
        <!--<div ng-show="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
       
        <!-- ukryty div dokóki nie ma wyjątku działa podobnie jak ng-show tylko warunek jest inaczej stworzony-->
-       <div ng-hide="!list.errorMessage" class="error">Error: {{list.errorMessage}}</div> 
+       <!--<div ng-hide="!list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
     </div>
 
   </body>
